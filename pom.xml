@@ -13,15 +13,27 @@
         <maven.compiler.version>3.11.0</maven.compiler.version>
         <maven.surefire.version>3.0.0</maven.surefire.version>
         <karate.version>1.4.1</karate.version>
-    </properties>    
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>7.3.0</version> <!-- Remplacez par la dernière version disponible -->
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.8.0</version> <!-- Remplacez par la dernière version disponible -->
+            <scope>test</scope>
+        </dependency>
 
-    <dependencies>         
         <dependency>
             <groupId>com.intuit.karate</groupId>
             <artifactId>karate-junit5</artifactId>
             <version>${karate.version}</version>
             <scope>test</scope>
-        </dependency>		
+        </dependency>
     </dependencies>
 
     <build>
@@ -51,7 +63,7 @@
                 <configuration>
                     <argLine>-Dfile.encoding=UTF-8</argLine>
                 </configuration>
-            </plugin>          
+            </plugin>
         </plugins>        
     </build>       
     
