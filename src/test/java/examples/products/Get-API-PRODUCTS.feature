@@ -1,9 +1,11 @@
-Feature: Test de l'API analytics.dev.sparklink.mobelite.local
+Feature: Testing Users API
 
   Background:
-    * url 'http://analytics.dev.sparklink.mobelite.local/api/analytic/statistics'
+    * url 'https://reqres.in/api'
 
-  Scenario: Obtenir des statistiques d'analyse pour les produits
-    Given request { "fieldIds": [ 18 ], "analyticTypes": ["APPS"] }
-    When method POST
+  Scenario: Successful API Request
+    Given path 'users'
+    And param page = 2
+    When method get
     Then status 200
+    And match response.data[0].id == 7
