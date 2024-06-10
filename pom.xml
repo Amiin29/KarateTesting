@@ -16,19 +16,6 @@
     </properties>
     <dependencies>
         <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-java</artifactId>
-            <version>7.3.0</version> <!-- Remplacez par la dernière version disponible -->
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>5.8.0</version> <!-- Remplacez par la dernière version disponible -->
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
             <groupId>com.intuit.karate</groupId>
             <artifactId>karate-junit5</artifactId>
             <version>${karate.version}</version>
@@ -64,7 +51,7 @@
                     <argLine>-Dfile.encoding=UTF-8</argLine>
                 </configuration>
             </plugin>
-        </plugins>        
-    </build>       
-    
+        </plugins>
+    </build>
+
 </project>

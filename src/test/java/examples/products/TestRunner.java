@@ -7,7 +7,7 @@ class TestRunner {
     @Karate.Test
     Karate Post_Product() {
 
-        return Karate.run("classpath:examples/products/.feature").relativeTo(getClass());
+        return Karate.run("classpath:examples/products/").relativeTo(getClass());
     }
 //    @Order(2)
 //    @Karate.Test
