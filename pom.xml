@@ -14,7 +14,7 @@
         <maven.surefire.version>3.0.0</maven.surefire.version>
         <karate.version>1.4.1</karate.version>
     </properties>
-    <dependencies>
+<dependencies>
         <dependency>
             <groupId>com.intuit.karate</groupId>
             <artifactId>karate-junit5</artifactId>
@@ -53,5 +53,6 @@
             </plugin>
         </plugins>
     </build>
+
 
 </project>
