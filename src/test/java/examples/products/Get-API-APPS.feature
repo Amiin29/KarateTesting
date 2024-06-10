@@ -1,11 +1,7 @@
-Feature: Testing Users API
+Feature: Testing GET Products API
 
-  Background:
-    * url 'https://reqres.in/api'
-
-  Scenario: Successful API Request
-    Given path 'users'
-    And param page = 2
-    When method get
+  Scenario: Verify response from GET products endpoint
+    Given url 'https://dummyjson.com/products'
+    When method GET
     Then status 200
-    And match response.data[0].id == 7
+    And assert responseStatus == 200
