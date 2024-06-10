@@ -1,9 +1,9 @@
-name: Karate CI
+name: Workflow Karate CII
 
 on:
   push:
     branches:
-      - main
+      - develop
 
 jobs:
   test:
