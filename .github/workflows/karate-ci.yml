@@ -21,6 +21,3 @@ jobs:
 
     - name: Build and test with Maven
       run: mvn clean test
-
-    - name: Generate Karate Reports
-      run: mvn surefire-report:report-only karate:stop
