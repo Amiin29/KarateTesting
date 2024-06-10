@@ -1,4 +1,4 @@
-name: Karate CI
+name: Karate Ci
 
 on:
   push:
