@@ -1,4 +1,4 @@
-name: Karate CI
+name: Workflow Karate CII
 
 on:
   push:
@@ -10,14 +10,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-      - name: Set up JDK
-        uses: actions/setup-java@v2
-        with:
-          distribution: 'adopt'
-          java-version: '11'
+    - name: Set up JDK
+      uses: actions/setup-java@v2
+      with:
+        distribution: 'adopt'
+        java-version: '11'
 
-      - name: Build and test with Maven
-        run: mvn clean test
+    - name: Build and test with Maven
+      run: mvn clean test
+
+    - name: Generate Karate Reports
+      run: mvn surefire-report:report-only karate:stop
