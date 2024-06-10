@@ -1,7 +1,9 @@
-Feature: Testing GET Products API
+Feature: Test de l'API analytics.dev.sparklink.mobelite.local
 
-  Scenario: Verify response from GET products endpoint
-    Given url 'https://dummyjson.com/products'
-    When method GET
+  Background:
+    * url 'http://analytics.dev.sparklink.mobelite.local/api/analytic/statistics'
+
+  Scenario: Obtenir des statistiques d'analyse pour les produits
+    Given request { "fieldIds": [ 18 ], "analyticTypes": ["APPS"] }
+    When method POST
     Then status 200
-    And assert responseStatus == 200
