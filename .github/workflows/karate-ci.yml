@@ -1,9 +1,7 @@
 name: Karate Ci
 
 on:
-  push:
-    branches:
-      - develop
+  workflow_dispatch:
 
 jobs:
   test:
